@@ -186,4 +186,11 @@ describe("Lists", function () {
     expect(util.run(code)).toEqual(true);
   });
 
+  it("if [1, 2, 3]", function () {
+    var code = "\
+    if [1, 2, 3]: return 'not empty'\n\
+    return 'empty'";
+    expect(util.run(code)).toBe("not empty");
+  });
+
 });
