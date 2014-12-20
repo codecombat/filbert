@@ -193,4 +193,11 @@ describe("Lists", function () {
     expect(util.run(code)).toBe("not empty");
   });
 
+  it("if []", function () {
+    var code = "\
+    if []: return 'not empty'\n\
+    return 'empty'";
+    expect(util.run(code)).toBe("empty");
+  });
+
 });
